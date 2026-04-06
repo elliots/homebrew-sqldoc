@@ -5,21 +5,21 @@
 class Sqldoc < Formula
   desc "SQL documentation and code generation tool"
   homepage "https://github.com/elliots/sqldoc"
-  version "0.0.3"
+  version "0.0.10"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/elliots/sqldoc/releases/download/v0.0.3/sqldoc_darwin_amd64.tar.gz"
-      sha256 "8f07683001e975063558a12cc9bfcff143b1239ed2301bcec57b7f5f12485298"
+      url "https://github.com/elliots/sqldoc/releases/download/v0.0.10/sqldoc_darwin_amd64.tar.gz"
+      sha256 "4d4a860cd55a460496d0300d5bf6b60e0f00f21400773754acf5bfcd7f5ddc33"
 
       define_method(:install) do
         bin.install "sqldoc"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/elliots/sqldoc/releases/download/v0.0.3/sqldoc_darwin_arm64.tar.gz"
-      sha256 "dc6f7a43c79df75d4066742f2954265c1ec6262a50ae4b18eb28140224f44bc9"
+      url "https://github.com/elliots/sqldoc/releases/download/v0.0.10/sqldoc_darwin_arm64.tar.gz"
+      sha256 "4656bf6572f28de19a68e52cf73fc6bb706a09b66d989135d53420f902537fc2"
 
       define_method(:install) do
         bin.install "sqldoc"
@@ -29,15 +29,15 @@ class Sqldoc < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/elliots/sqldoc/releases/download/v0.0.3/sqldoc_linux_amd64.tar.gz"
-      sha256 "7dacd88aa913ba06bc493830fa686273bf3e864709a17d043be8e3737b948ed5"
+      url "https://github.com/elliots/sqldoc/releases/download/v0.0.10/sqldoc_linux_amd64.tar.gz"
+      sha256 "de082878db9e88c7b4031414e65b95b3c24adca4cfb8aec16f42d79e96f86402"
       define_method(:install) do
         bin.install "sqldoc"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/elliots/sqldoc/releases/download/v0.0.3/sqldoc_linux_arm64.tar.gz"
-      sha256 "4fde169696eec372aec5d64540b534ab09a70ac636ac43fbc0e05757ef7e40b4"
+      url "https://github.com/elliots/sqldoc/releases/download/v0.0.10/sqldoc_linux_arm64.tar.gz"
+      sha256 "c32d0087e9fb06ccea38ce67b6bd152bf7a986166abd4e3e34ff6866c9208ed1"
       define_method(:install) do
         bin.install "sqldoc"
       end
