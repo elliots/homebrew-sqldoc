@@ -2,25 +2,25 @@ class Sqldoc < Formula
   desc "SQL documentation and code generation tool"
   homepage "https://github.com/elliots/sqldoc"
   license ""
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/elliots/sqldoc/releases/download/v0.1.0/sqldoc_darwin_arm64.tar.gz"
-      sha256 "c845500a0a2f2739b8de5028033c0d6e70310b990ee71b24daee8bf8df5aab7c"
+      url "https://github.com/elliots/sqldoc/releases/download/v0.1.1/sqldoc_darwin_arm64.tar.gz"
+      sha256 "dca548647e5796f6ee4ee095116885aa9d4d7be476d68f5d35df92924b0e7179"
     else
-      url "https://github.com/elliots/sqldoc/releases/download/v0.1.0/sqldoc_darwin_amd64.tar.gz"
-      sha256 "1aa4f807c315f7c76a26e2b333647a8fe357237f906455d843c40cb279b3a49e"
+      url "https://github.com/elliots/sqldoc/releases/download/v0.1.1/sqldoc_darwin_amd64.tar.gz"
+      sha256 "196fde35331f4bc718a03dbc2b114b852dace01a4cae1db2effbc7ce9a2106b2"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/elliots/sqldoc/releases/download/v0.1.0/sqldoc_linux_arm64.tar.gz"
-      sha256 "87c159617914bb29a0299ff9b0294d3fac9ba8ac0a2d46a3ba435296860c22f9"
+      url "https://github.com/elliots/sqldoc/releases/download/v0.1.1/sqldoc_linux_arm64.tar.gz"
+      sha256 "397e4629f30ba53a0879727cc172f68feb78d9020fce82eb7eba5dc1d16a9983"
     else
-      url "https://github.com/elliots/sqldoc/releases/download/v0.1.0/sqldoc_linux_amd64.tar.gz"
-      sha256 "273b88cefb580a5e5062d9935402cab6e301256e6b9a44dc81ab4d49ce2ccc45"
+      url "https://github.com/elliots/sqldoc/releases/download/v0.1.1/sqldoc_linux_amd64.tar.gz"
+      sha256 "2ff17fb8b82e794fc9e8ffe84c8a7dd3886681dbb1c04a5a5245edf99e2b6900"
     end
   end
 
@@ -29,6 +29,6 @@ class Sqldoc < Formula
   end
 
   test do
-    system "#{bin}/sqldoc", "--version"
+    system "\#{bin}/sqldoc", "--version"
   end
 end
